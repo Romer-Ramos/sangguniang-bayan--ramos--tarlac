@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Romerick Labs | Innovative Tech Solutions</title>
+  <style>
+    /* ---------- BASIC STYLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0a0f1f;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 15, 31, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-size: 1.8em;
+      color: #00e0ff;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e0ff;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      color: #00e0ff;
+      margin-bottom: 10px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      max-width: 600px;
+      opacity: 0.8;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .btn {
+      background: #00e0ff;
+      color: #0a0f1f;
+      padding: 12px 25px;
+      border-radius: 25px;
+      margin-top: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: #00e0ff;
+    }
+
+    /* ---------- FLOATING CODE BACKGROUND ---------- */
+    .floating-code {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .code {
+      position: absolute;
+      font-family: monospace;
+      color: rgba(0, 255, 255, 0.3);
+      font-size: 14px;
+      animation: float 10s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(10deg);
+        opacity: 0;
+      }
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 100px 50px;
+      text-align: center;
+    }
+
+    .services h3, .projects h3, .team h3, .contact h3 {
+      font-size: 2.5em;
+      color: #00e0ff;
+      margin-bottom: 30px;
+    }
+
+    .services .box, .projects .box, .team .member {
+      display: inline-block;
+      width: 280px;
+      margin: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      transition: transform 0.4s, background 0.3s;
+    }
+
+    .services .box:hover, .projects .box:hover, .team .member:hover {
+      transform: translateY(-10px);
+      background: rgba(0, 224, 255, 0.1);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #050a17;
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+    }
+
+    /* ---------- ANIMATIONS ---------- */
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Romerick Labs</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="floating-code" id="floating-code"></div>
+    <h2>Innovating the Future with Technology</h2>
+    <p>At Romerick Labs, we specialize in AI, Web Development, and Smart Solutions that bring your digital vision to life.</p>
+    <button class="btn">Explore More</button>
+  </section>
+
+  <section class="services" id="services">
+    <h3>Our Services</h3>
+    <div class="box">💻 Web & App Development</div>
+    <div class="box">🤖 Artificial Intelligence</div>
+    <div class="box">☁️ Cloud Integration</div>
+    <div class="box">🔒 Cybersecurity Solutions</div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h3>Our Projects</h3>
+    <div class="box">AI Voice Assistant</div>
+    <div class="box">Smart City Platform</div>
+    <div class="box">E-Governance System</div>
+  </section>
+
+  <section class="team" id="team">
+    <h3>Meet the Team</h3>
+    <div class="member">🧑‍💻 Federick - Lead Developer</div>
+    <div class="member">👨‍💻 Mary Rose - System Architect</div>
+    <div class="member">👩‍💻 Romer - UI/UX Designer</div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h3>Contact Us</h3>
+    <p>Have a project in mind? Let's collaborate!</p>
+    <p>Email: <a href="mailto:info@romericklabs.com" style="color:#00e0ff;">info@romericklabs.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 Romerick Labs. All rights reserved.
+  </footer>
+
+  <script>
+    // Floating code generator
+    const codeContainer = document.getElementById("floating-code");
+    const codeSnippets = [
+      "<div class='card'></div>",
+      "console.log('Romerick Labs');",
+      "if (innovation) { grow(); }",
+      "fetch('/api/tech');",
+      "<h1>AI Powered Future</h1>",
+      "const code = 'floating';",
+      "system.init();"
+    ];
+
+    function createFloatingCode() {
+      const code = document.createElement("div");
+      code.className = "code";
+      code.textContent = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+      code.style.left = Math.random() * 100 + "%";
+      code.style.animationDuration = 8 + Math.random() * 8 + "s";
+      codeContainer.appendChild(code);
+
+      setTimeout(() => code.remove(), 10000);
+    }
+
+    setInterval(createFloatingCode, 800);
+  </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Municipality of Ramos</title>
+  <link rel="icon" href="assets/logo.png">
+
+  <style>
+    /* ---------- GENERAL STYLES ---------- */
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #a7c7ff, #ffffff);
+      overflow: hidden;
+    }
+
+    /* ---------- BACKGROUND ANIMATION ---------- */
+    @keyframes floatBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      background: linear-gradient(-45deg, #e3f2fd, #bbdefb, #90caf9, #e3f2fd);
+      background-size: 400% 400%;
+      animation: floatBg 10s ease infinite;
+    }
+
+    /* ---------- LOGIN CARD ---------- */
+    .login-card {
+      background: white;
+      width: 370px;
+      padding: 45px 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-card img {
+      width: 90px;
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .login-card h2 {
+      color: #0d47a1;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-size: 24px;
+      letter-spacing: 1px;
+      animation: slideDown 0.8s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- INPUT GROUP ---------- */
+    .form-group {
+      position: relative;
+      margin-bottom: 22px;
+      text-align: left;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      color: #777;
+      font-size: 14px;
+      pointer-events: none;
+      transition: 0.3s;
+      background: white;
+      padding: 0 5px;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 10px;
+      font-size: 12px;
+      color: #1565c0;
+    }
+
+    .form-group input:focus {
+      border-color: #1565c0;
+      box-shadow: 0 0 8px rgba(21, 101, 192, 0.3);
+    }
+
+    /* ---------- BUTTON ---------- */
+    .btn-login {
+      background-color: #1565c0;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(21, 101, 192, 0.3);
+    }
+
+    .btn-login:hover {
+      background-color: #0d47a1;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(21, 101, 192, 0.4);
+    }
+
+    /* ---------- FOOTER TEXT ---------- */
+    .footer-text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .footer-text a {
+      color: #1565c0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 400px) {
+      .login-card {
+        width: 90%;
+        padding: 35px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-card">
+    <img src="image/logo.jpg" alt="Municipality Logo">
+    <h2>Sangguinang Bayan</h2>
+
+    <form>
+      <div class="form-group">
+        <input type="text" id="username" placeholder=" " required>
+        <label for="username">Username</label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="password" placeholder=" " required>
+        <label for="password">Password</label>
+      </div>
+
+      <button type="submit" class="btn-login">Login</button>
+    </form>
+
+    <div class="footer-text">
+      <p>Forgot your password? <a href="#">Click here</a></p>
+    </div>
+  </div>
+</body>
+</html>
